@@ -33,8 +33,7 @@ public class MainActivity extends Activity {
                                                 null,
                                                 null);
 
-            //Token token = wrapper.login("adi2188", "abcd123");
-            Token token = wrapper.login("simonzxc-1", "abc123");
+            Token token = wrapper.login("username", "password");
 
             Log.d("DEBUG", "token is: " + token);
         } catch (IOException e) {
