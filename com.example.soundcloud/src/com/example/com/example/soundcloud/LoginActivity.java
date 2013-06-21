@@ -53,6 +53,7 @@ public class LoginActivity extends Activity {
                                                 null,
                                                 null);
 
+
             //Token token = wrapper.login("adi2188", "abcd123");
             Token token = wrapper.login(username, passwd);
             Intent i = new Intent(this, ListActivity.class);
@@ -60,6 +61,9 @@ public class LoginActivity extends Activity {
             i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(i);
             
+
+
+
             Log.d("DEBUG", "token is: " + token);
         } catch (IOException e) {
             // TODO Auto-generated catch block
