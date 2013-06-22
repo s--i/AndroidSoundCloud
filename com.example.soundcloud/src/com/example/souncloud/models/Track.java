@@ -4,11 +4,19 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+
+
+
+
 import java.util.ArrayList;
 
 public class Track extends BaseModel {
+	private User user;
+	
+	 public User getUser() {
+	        return user;
+	 }
     
-
     public String getTitle() {
         return getString("title");
     }
@@ -16,11 +24,26 @@ public class Track extends BaseModel {
     public long getId() {
         return getLong("id");
     }
+    
+    public String getSharing() {
+    	return getString("sharing");
+    }
+    
+    public String getCreatedAt() {
+    	return getString("created_at");
+    }
 
 
     public static Track fromJson(JSONObject jsonObject) {
         Track track = new Track();
-        track.jsonObject = jsonObject;
+        
+        try {
+        	track.jsonObject = jsonObject;
+			track.user = User.fromJson(jsonObject.getJSONObject("user"));
+		} catch (JSONException e) {
+			e.printStackTrace();
+			return null;
+		}
         return track;
     }
 

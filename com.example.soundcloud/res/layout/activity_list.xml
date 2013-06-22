@@ -12,7 +12,7 @@
     <ListView
         android:id="@+id/listView1"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="375dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" >
     </ListView>
@@ -26,5 +26,14 @@
         android:layout_marginLeft="112dp"
         android:layout_marginTop="64dp" >
     </MediaController>
+
+    <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/listView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/recordbutton" />
 
 </RelativeLayout>

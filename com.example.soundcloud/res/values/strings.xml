@@ -6,5 +6,6 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_list">Dashboard</string>
     <string name="title_activity_play">Play</string>
+    <string name="listview_text">Large Text</string>
 
 </resources>
